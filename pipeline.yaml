@@ -1,3 +1,8 @@
+trigger:
+- main  
+
+pool:
+  vmImage: 'windows-latest'
 
 variables:
   buildConfiguration: 'Release'
@@ -12,5 +17,5 @@ steps:
     azureSubscription: 'Azure'
     appType: 'webApp'
     appName: 'petedotnetwin'
-    package: '$(System.DefaultWorkingDirectory)/**/*.zip'
+    package: '$(System.DefaultWorkingDirectory)/wwwroot/*.zip'
     deploymentMethod: 'auto'
